@@ -19,7 +19,7 @@ export const PlaylistsPage = () => {
   const [playlistId, setPlaylistId] = useState<string | null>(null);
   const { register, handleSubmit, reset } = useForm<UpdatePlaylistArgs>();
 
-  const { data } = useFetchPlaylistsQuery();
+  const { data } = useFetchPlaylistsQuery({search: '1'});
   const [deletePlaylist] = useDeletePlaylistMutation();
   const [updatePlaylist] = useUpdatePlaylistMutation();
 
